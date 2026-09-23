@@ -70,3 +70,16 @@ li {
 a { color: #ab0d0d; text-decoration: none; }
 a:hover { color: #ab0d0d; text-decoration:underline; }
 
+
+.papers .cancelled,
+.papers .guest {
+	border-radius: 4px;
+}
+
+.papers .cancelled { background-color: #fde2e2; }
+.papers .guest { background-color: #e0f5e0; }
+
+.papers .cancelled p,
+.papers .guest p {
+	color: #555555;
+}
