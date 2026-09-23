@@ -10,16 +10,36 @@
     <link rel="stylesheet" href="css/local.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700" rel="stylesheet">
 
-    <title>CSE227: Graduate Computer Security</title>
+    <title>CSE190/291: How The Web Tracks You</title>
   </head>
   <body>
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col col-lg-10">
-          <h1>Graduate Computer Security</h1>
-          <h3>UCSD CSE 227, Spring 2026</h3>
+          <h1>How the Web Tracks You / Targeted Advertising</h1>
+          <h3>UCSD CSE 190/291, Fall 2026</h3>
 
-          <p> This graduate-level course focuses on computer security: the study of computer systems in the presence of an adversary. The course is a breadth course designed to give students exposure to many aspects of computer security, with topics including systems security, web security, edge security, and user privacy. The course will introduce students to modern research challenges in the area and the standards for how we design safer and more secure computer systems. Students will primarily read, synthesize, present, and discuss research papers. The course will culminate in a presentation of a quarter-long research project that students will conduct in small groups. </p>
+          <p> This course focuses on <strong>web privacy</strong>, covering a wide range of
+          topics on both the “defensive” and “offensive” side of the field. In
+          particular, we will focus on web tracking - the technical mechanisms
+          that companies use to serve you hypertargeted advertisements or other
+          personalized experiences.</p> 
+
+          <p>Students will learn the fundamentals of the web (i.e., the protocols
+          and infrastructure that support the web today), how privacy is (or
+          isn’t) protected today, and get hands-on experience (through PAs)
+          implementing cookie-based tracking and inference, browser / device
+          fingerprinting, and ad blocking technologies.</p>
+
+          <p>The goal of the course is to introduce students to the vast tracking
+          ecosystem that underlies the web and give students experience
+          implemented these technologies in practice.  To complete the projects
+          in this course, you will need to have (or gain) familiarity with all
+          aspects of web programming, not limited to — web server deployment,
+          JavaScript, web databases (e.g. SQL), client/server applications, and
+          web extensions.  We will not explicitly teach these in class and you
+          will be expected to pick up what you need for each project on your
+          own. </p>
 
           <!---<p> If you are electing to take this course for a comprehensive exam,
           please follow the requirements for the exam here: <a
@@ -28,92 +48,89 @@
 
           <h2>Course Information</h2>
 
-		  <p><b>Lecture:</b> Tu/Th 9:30&ndash;10:50 AM.
-		  <a href="https://maps.app.goo.gl/3ckAeJdx9xwLwpHE8">Warren Lecture Hall 2204</a>.
-          
-          <p><b>Instructor:</b> <a href="https://kumarde.com">Deepak Kumar</a><br/>
-             Office Hours: Tuesday 11:00&ndash;12:00 PM, or by appointment, CSE 3248.</p>
-          
-          <p><b>Teaching Assistant:</b> Arshia Arya<br/>
-          Office Hours: Wednesdays, 1-2pm, <a
-                                                   href="https://ucsd.zoom.us/j/93431121328"
-                                                         target="_blank">
-                                                                 Zoom</a></p>
-          
-	      <p><b>Prerequisites:</b> Some systems and cybersecurity knowledge is helpful, but not required. This is a research focused course, so students who are excited to explore novel topics are encouraged to enroll.</p>
+          <p><b> Lectures: </b></p>
+          <i><p>All students are welcome to attend either or both
+              sessions.</p></i>
+          <ul>
+              <li> <b>291I:</b> Tu/Th 12:30&ndash;1:50 PM. 
+                  <a href="https://maps.app.goo.gl/3ckAeJdx9xwLwpHE8">Coalition
+                  B23</a>
+                    
+              </li> 
+              <li> <b>190:</b> Tu/Th 2:00&ndash;3:20 PM.
+                  <a href="https://maps.app.goo.gl/SM6gk39rbAZZ1z2D6">Cognitive
+                  Science 002</a> </li>
+          </ul>
+          <i> </i>
 
-          <p><b>Communication:</b> We use <a href="https://canvas.ucsd.edu/courses/74259">Canvas</a> for announcements;<a href="https://docs.google.com/document/d/1cKA3dDkZWEdCNazJUg4RcMvuAz2jj1xMsJljieM2LNY/edit?tab=t.0" target="_blank"> You can find the syllabus here.</a></p> 
-          <p><b>Submissions:</b> All course assignments will be submitted through Gradescope. Entry Code: <b>ZJ57EJ</b>.
+
+          <p><b>Instructors:</b> <a href="https://kumarde.com" target="_blank">Deepak
+              Kumar</a>, <a href="https://kvaccaro.com/"
+                            target="_blank">Kristen Vaccaro</a><br/>
+             Deepak OH: Tuesday 4:00&ndash;5;00 PM, or by appointment, CSE
+             3112<br/>
+             Kristen OH: 
+          </p>
+          
+          <p><b>TAs:</b> Haodi Zou, Edward Zhou<br/>
+            Office Hours: 
+            Office Hours: <strong>TBD</strong></p>
+          
+	      <p><b>Prerequisites:</b>CSE29 or equivalent.</p>
+
+          <p><b>Communication:</b> We use <a
+              href="https://piazza.com/ucsd/fall2026/cse190291/home">Piazza</a>
+          for announcements and course communication;<a href="https://docs.google.com/document/d/1J0Ill8GRDaLNBmVGsueVCKd42FvfMLoFIxuezv_WsiM/edit?tab=t.0" target="_blank"> You can find the syllabus here.</a></p> 
+          <p><b>Submissions:</b> All course assignments will be submitted
+          through Gradescope, through the specific Canvas of the course you are enrolled in.</b>.
           <h2>Schedule</h2>
           <p>The tentative schedule and readings for the class are below:</p>
           <div class="papers">
             <div class="row">
               <div class="col col-lg-6">
-				<h4>3/31&nbsp;&nbsp;Introduction and Administrivia <a
-                                                                           href="lectures/lecture_1.pdf"
-                                                                           target="_blank">
-                        [slides] </a></h4>
+				<h4>3/31&nbsp;&nbsp;Introduction and Administrivia</h4>
                 <p> Course introduction, definitions, reflections on trusting trust.</p>
               </div>
               <div class="col col-lg-6">
-                <h4>4/1&nbsp;&nbsp;Threat Models & the Science of Security <a
-                                                                                   href="lectures/lecture_2.pdf"
-                                                                                   target="_blank">
-                        [slides] </a></h4>
+                <h4>4/1&nbsp;&nbsp;Threat Models & the Science of Security</h4>
                 <p>How do we do computer security research? What are our goals? How do we measure those goals?</p>
               </div>
             </div>
             <div class="row">
               <div class="col col-lg-6">
-                <h4>4/7&nbsp;&nbsp;Software Security <a
-                                                             href="lectures/lecture_3.pdf"
-                                                             target="_blank">
-                        [slides] </a></h4>
+                <h4>4/7&nbsp;&nbsp;Software Security</h4>
                 <p> Smashing The Stack For Fun And Profit <a href="https://inst.eecs.berkeley.edu/~cs161/fa08/papers/stack_smashing.pdf" target="_blank"> [link] </a></p>
                 <p> The geometry of innocent flesh on the bone: Return-into-libc without function calls (on the x86)" <a href="./papers/geometry.pdf" target="_blank"> [link] </a></p>
               </div>
               <div class="col col-lg-6">
-                <h4>4/9&nbsp;&nbsp;Side Channels <a
-                                                         href="lectures/lecture_4.pdf"
-                                                         target="_blank">
-                        [slides] </a></h4>
+                <h4>4/9&nbsp;&nbsp;Side Channels</h4>
                 <p> Lest We Remember: Cold-Boot Attacks on Encryption Keys <a href="https://dl.acm.org/doi/pdf/10.1145/1506409.1506429" target="_blank"> [link] </a></p>
                 <p> Keyboard Acoustic Emanations Revisited <a href="https://www.cs.cornell.edu/~shmat/courses/cs6431/zhuang.pdf" target="_blank"> [link] </a></p>
               </div>
             </div>
             <div class="row">
               <div class="col col-lg-6">
-                <h4>4/14&nbsp;&nbsp;IoT Devices <a
-                                                        href="lectures/lecture_5.pdf"
-                                                        target="_blank">
-                        [slides] </a></h4>
+                <h4>4/14&nbsp;&nbsp;IoT Devices</h4>
                 <!--<p><b> Readings for today: </b><p>-->
                 <p> Skill Squatting Attacks on Amazon Echo <a href="https://kumarde.com/papers/echosquat.pdf" target="_blank"> [link] </a></p>
                 <p> [Optional] Light Commands: Laser-Based Audio Injection Attacks on Voice-Controllable Systems <a href="https://www.usenix.org/system/files/sec20-sugawara.pdf" target="_blank"> [link] </a></p>
               </div>
               <div class="col col-lg-6">
-                <h4>4/16&nbsp;&nbsp;Web Fundamentals <a
-                                                             href="lectures/lecture_6.pdf"
-                                                             target="_blanks">
-                        [slides] </a></h4>
+                <h4>4/16&nbsp;&nbsp;Web Fundamentals</h4>
                 <p> Robust Defenses for Cross-Site Request Forgery <a href="https://seclab.stanford.edu/websec/csrf/csrf.pdf" target="_blank"> [link] </a></p>
                 <p> Parse Me, Baby, One More Time: Bypassing HTML Sanitizer via Parsing Differentials.<a href="https://www.ias.cs.tu-bs.de/publications/parsing_differentials.pdf" target="_blank"> [link] </a></p>
               </div>
             </div>
             <div class="row">
               <div class="col col-lg-6">
-                <h4>4/21&nbsp;&nbsp;Web Ecosystem <a
-                                                          href="lectures/lecture_7.pdf"
-                                                          target="_blank">
-                        [slides] </a></h4>
+                <h4>4/21&nbsp;&nbsp;Web Ecosystem</h4>
                 <p> Internet Jones and the Raiders of the Lost Trackers: An Archaeological Study of Web Tracking from 1996 to 2016<a href="https://www.usenix.org/system/files/sec16_paper_lerner_1.pdf" target="_blank"> [link] </a></p>
                 <p> Formalizing Dependence of Web Infrastructure <a
                 href="https://cs.stanford.edu/~gakiwate/papers/sigcomm25-centralization.pdf"
                 target="_blank"> [link] </a></p>
               </div>
               <div class="col col-lg-6">
-                <h4>4/23&nbsp;&nbsp;TLS I <a href="lectures/lecture_8.pdf"
-                                             target="_blank"> [slides] </a></h4>
+                <h4>4/23&nbsp;&nbsp;TLS I</h4>
                 <p> Mining Your Ps and Qs: Detection of Widespread Weak Keys in Network Devices. <a href="https://www.usenix.org/system/files/conference/usenixsecurity12/sec12-final228.pdf" target="_blank"> [link] </a></p>
                 <p> [optional] The Security Impact of HTTPS Interception <a href="https://git.safemobile.org/crimeflare/cloudflare-tor/raw/commit/020252c3748c37c4b0f2da47f46b3505f82435fa/pdf/2017-The_Security_Impact_of_HTTPS_Interception.pdf" target="_blank"> [link] </a></p>
               </div>
@@ -126,19 +143,14 @@
               <div class="col col-lg-6">
                 <h4>4/30&nbsp;&nbsp;TLS II (On <a
                         href="https://ucsd.zoom.us/j/93589389366"
-                        target="_blank">Zoom</a>) <a
-                        href="lectures/lecture_9.pdf" target="_blank"> [slides]
-                    </a> </h4>
+                        target="_blank">Zoom</a>) </h4>
                 <p> Tracking Certificate Misissuance in the Wild <a href="https://zakird.com/papers/zlint.pdf" target="_blank"> [link] </a></p>
                 <p> [optional] The Most Dangerous Code in the World: Validating SSL Certificates in Non-Browser Software <a href="https://www.cs.umd.edu/class/fall2019/cmsc818O/papers/most-dangerous-code.pdf" target="_blank"> [link] </a></p>
               </div>
             </div>
             <div class="row">
               <div class="col col-lg-6">
-                <h4>5/5&nbsp;&nbsp;DDoS & Botnets <a
-                                                          href="lectures/lecture_10.pdf"
-                                                          target="_blank">
-                        [slides] </a></h4>
+                <h4>5/5&nbsp;&nbsp;DDoS & Botnets</h4>
                 <p> Inferring Internet Denial-of-Service Activity <a href="https://www.usenix.org/legacy/events/sec01/moore/moore.pdf" target="_blank"> [link] </a></p>
                 <p> Assessing the Aftermath: the Effects of a Global Takedown
                 against DDoS-for-hire Services <a
@@ -146,20 +158,14 @@
                 target="_blank"> [link] </a></p>
               </div>
               <div class="col col-lg-6">
-                <h4>5/7&nbsp;&nbsp;Network Censorship <a
-                                                              href="lectures/lecture_11.pdf"
-                                                              target="_blank">
-                        [slides] </a></h4>
+                <h4>5/7&nbsp;&nbsp;Network Censorship</h4>
                 <p> Wallbleed: A Memory Disclosure Vulnerability in the Great Firewall of China <a href="https://www.ndss-symposium.org/wp-content/uploads/2025-237-paper.pdf" target="_blank"> [link] </a></p>
                 <p> Digital Discrimination of Users in Sanctioned States: The Case of the Cuba Embargo <a href="https://ramakrishnansr.com/assets/cuba.pdf" target="_blank"> [link] </a></p>
               </div>
             </div>
             <div class="row">
               <div class="col col-lg-6">
-                <h4>5/12&nbsp;&nbsp;More Network Censorship <a
-                                                                    href="lectures/lecture_12.pdf"
-                                                                    target="_blank">
-                        [slides] </a></h4>
+                <h4>5/12&nbsp;&nbsp;More Network Censorship</h4>
                 <p> [optional] An Illustrated Guide to the Kaminsky DNS Vulnerability <a href="http://unixwiz.net/techtips/iguide-kaminsky-dns-vuln.html" target="_blank"> [link] </a></p>
                 <p> [optional] Forward to Hell? On the Potentials of Misusing Transparent
                 DNS Forwarders in Reflective Amplification Attacks <a
@@ -168,20 +174,14 @@
                 <p> [optional] How DNS Works <a href="https://www.cloudflare.com/learning/dns/what-is-dns/" target="_blank"> [link] </a></p>
               </div>
               <div class="col col-lg-6">
-                <h4>5/14&nbsp;&nbsp;Spam and e-Crime <a
-                                                             href="lectures/lecture_13.pdf"
-                                                             target="_blank">
-                        [slides] </a></h4>
+                <h4>5/14&nbsp;&nbsp;Spam and e-Crime</h4>
                 <p> Click trajectories: End-to-end analysis of the spam value chain <a href="https://cseweb.ucsd.edu/~savage/papers/Oakland11.pdf" target="_blank"> [link] </a></p>
                 <p> Re: CAPTCHAs – Understanding CAPTCHA-Solving Services in an Economic Context <a href="https://cseweb.ucsd.edu/~savage/papers/UsenixSec10.pdf" target="_blank"> [link] </a></p>
               </div>
             </div>
             <div class="row">
               <div class="col col-lg-6">
-                <h4>5/19&nbsp;&nbsp;Usability and Human Factors <a
-                                                                        href="lectures/lecture_14.pdf"
-                                                                        target="_blank">
-                        [slides] </a></h4>
+                <h4>5/19&nbsp;&nbsp;Usability and Human Factors</h4>
                 <p> Why Johnny Can’t Encrypt: A Usability Evaluation of PGP 5.0<a href="https://people.eecs.berkeley.edu/~tygar/papers/Why_Johnny_Cant_Encrypt/USENIX.pdf" target="_blank"> [link] </a></p>
                 <p> Alice in Warningland: A Large-Scale Field Study of Browser Security Warning Effectiveness <a href="https://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/41323.pdf" target="_blank"> [link] </a></p>
               </div>
@@ -192,19 +192,13 @@
             </div>
             <div class="row">
               <div class="col col-lg-6">
-                <h4>5/26&nbsp;&nbsp;AI Security and Privacy <a
-                                                                    href="lectures/lecture_15.pdf"
-                                                                    target="_blank">
-                        [slides] </a></h4>
+                <h4>5/26&nbsp;&nbsp;AI Security and Privacy</h4>
                 <p> Watch this talk by Nicholas Carlini about AI vulnerability
                 finding: <a href="https://www.youtube.com/watch?v=1sd26pWhfmg" target="_blank"> [link] </a></p>
                 <p> Large-scale online deanonymization with LLMs<a href="https://arxiv.org/pdf/2602.16800" target="_blank"> [link] </a></p>
               </div>
               <div class="col col-lg-6">
-                <h4>5/28&nbsp;&nbsp;Security Debate Day <a
-                                                                href="lectures/lecture_16.pdf"
-                                                                target="_blank">
-                        [slides] </a></h4>
+                <h4>5/28&nbsp;&nbsp;Security Debate Day</h4>
                 <p> [optional] Dark Patterns at Scale: Findings from a Crawl of 11K Shopping Websites <a href="https://dl.acm.org/doi/pdf/10.1145/3359183" target="_blank"> [link] </a></p>
                 <p> [optional] SoK: Hate, harassment, and the changing landscape of online abuse. <a href="https://kumarde.com/papers/abuse_sok.pdf" target="_blank"> [link] </a></p>
               </div>
