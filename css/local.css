@@ -71,9 +71,24 @@ a { color: #ab0d0d; text-decoration: none; }
 a:hover { color: #ab0d0d; text-decoration:underline; }
 
 
-.papers .cancelled,
-.papers .guest {
-	border-radius: 4px;
+/* Each schedule entry gets a bordered box. Negative margins overlap
+   neighbouring borders so adjacent boxes share a single 1px edge. */
+.papers .row > [class*="col"] {
+	border: 1px solid #dddddd;
+	padding-bottom: 4px;
+}
+
+.papers .row + .row > [class*="col"] {
+	margin-top: -1px;
+}
+
+.papers .row > [class*="col"] + [class*="col"] {
+	margin-left: -1px;
+}
+
+/* No box for empty placeholder cells */
+.papers .row > [class*="col"]:not(:has(h4)) {
+	border-color: transparent;
 }
 
 .papers .cancelled { background-color: #fde2e2; }
